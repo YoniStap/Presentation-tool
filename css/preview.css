@@ -1,0 +1,57 @@
+#previewcontainer {
+
+/*	box-sizing: border-box;
+	border: 3px solid grey;*/
+
+	position: relative;
+	display: inline-block;
+	float: left;
+
+	width: 60%;
+	height: 100%;
+	
+}
+
+#preview{
+
+	box-shadow: 0px 0px 2px 1px grey;
+	background-color: white;
+	width: 95%;
+	height: 95%;
+
+	text-align: center;
+
+}
+
+#preview input{
+
+	text-align: center;
+	margin-left: 5%;
+
+	border: none;
+	font-size: 50px;
+	margin-top: 5%;
+	margin-bottom: 20%;
+}
+
+#preview input:focus{
+    outline: none;
+}
+
+#preview textarea{
+
+	text-align: center;
+	margin-left: 5%;
+
+	border: none;
+	font-size: 30px;
+	
+
+	width: 80%;
+	height: 30%;
+
+}
+
+#preview textarea:focus{
+    outline: 1px solid black;
+}

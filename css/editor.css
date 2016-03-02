@@ -1,0 +1,17 @@
+#editorcontainer {
+
+	position: relative;
+	display: inline-block;
+	float: left;
+
+	width: 20%;
+	height: 100%;
+}
+
+#editor{
+
+	box-shadow: 0px 0px 2px 1px grey;
+	background-color: white;
+	height: 95%;
+
+}
