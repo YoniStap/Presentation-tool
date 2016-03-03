@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { selectSlide } from '../actions/index';
 
 class SlideList extends Component {
 
@@ -10,7 +11,8 @@ class SlideList extends Component {
 
 			return(
 
-				<li key={slide.title}>
+				<li key={slide.title}
+					onClick={ () => this.props.selectSlide(slide)}>
 					{slide.title}
 				</li>
 			)
@@ -39,4 +41,10 @@ function mapStateToProps(state) {
 
 } 
 
-export default connect(mapStateToProps)(SlideList)
+function mapDispatchToProps(dispatch) {
+
+	return bindActionCreators( { selectSlide: selectSlide }, dispatch)
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SlideList)
