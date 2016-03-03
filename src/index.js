@@ -1,25 +1,15 @@
 import React from 'react';
-import { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 
-import Preview from './components/preview';
-import SlideList from './components/slidelist';
-import NavBar from './components/navbar';
-import Editor from './components/editor';
-import Fullscreen from './components/fullscreen';
+import App from './components/app';
+import reducers from './reducers';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-      	<NavBar />
-      	<div className="content">
-      		<SlideList /><Preview /><Editor />
-      	</div>
-      </div>
-    );
-  }
-}
+const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render(
-    <App />,document.querySelector('.container'));
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <App />
+  </Provider>
+  , document.querySelector('.container'));

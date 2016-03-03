@@ -12,7 +12,7 @@
 
 }
 
-#slidecontainer{
+#slidecontainer {
 
 	box-shadow: 0px 0px 2px 1px grey;
 	background-color: white;
@@ -21,10 +21,11 @@
 	overflow: scroll;
 	overflow-x: hidden;
 	text-align: center;
+	margin: 0;
 
 }
 
-.slide{
+li{
 
 	width: 60%;
 	height: 20%;
@@ -34,8 +35,9 @@
 	margin-right: auto;
 	margin-left: auto;
 	cursor: pointer;
-	padding-top: 10px;
-	text-align: left;
+	padding-top: 14px;
+	text-align: center;
+	list-style-type: none;
 
 }
 
